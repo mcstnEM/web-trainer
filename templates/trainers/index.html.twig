@@ -3,10 +3,23 @@
 {% block title %}Hello TrainersController!{% endblock %}
 
 {% block body %}
-<h1>Trainers</h1>
-<ul>
+<h1 
+class="text-2xl">Trainers</h1>
+<ul class="flex flex-wrap gap-1 justify-center">
     {% for trainer in trainers %}
-    <li>{{ trainer.name }}</li>
+    <li>
+        <div class="w-64 aspect-[4/3] flex flex-col bg-gray-50 p-4">
+            <h2 class="text-xl">{{ trainer.name|upper }}</h2>
+            <div class="w-32 aspect-squar object-cover rounded-full overflow-hidden">
+                <img class="w-full" src="{{asset('/images/profiles/user_1.png')}}" />
+            </div>
+            <ul class="text-sm mt-8">
+                <li>{{ trainer.address }}</li>
+                <li>{{ trainer.phone }}</li>
+                <li>{{ trainer.star }}</li>
+            </ul>
+        </div>
+    </li>
     {% endfor %}
 </ul>
 {% endblock %}

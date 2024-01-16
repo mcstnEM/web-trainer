@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TrainersController!{% endblock %}
+
+{% block body %}
+<h1>Trainers</h1>
+<ul>
+    {% for trainer in trainers %}
+    <li>{{ trainer.name }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

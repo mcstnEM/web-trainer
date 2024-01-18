@@ -12,8 +12,8 @@
         {% endblock %}
     </head>
     <body>
-        <header>
-            <ul class="flex gap-4">{# lien toujours utiliser les noms des liens car les liens physiques peuvent changer (url SEO) #}
+        <header class="bg-red">
+            <ul class="flex gap-4 hover:text-zinc-400">{# lien toujours utiliser les noms des liens car les liens physiques peuvent changer (url SEO) #}
                 <li><a href="{{ path('app_home') }}">home</a></li>
                 <li><a href="{{ path('app_trainers') }}">trainer</a></li>
                 <li><a href="{{ path('app_contact') }}">contact</a></li>

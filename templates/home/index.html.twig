@@ -2,9 +2,11 @@
 
 {% block body %}
 <ul>
-    {% for user in users %}
-    <li>{{ user.name }}</li>
+    {% for trainer in trainers %}
+    <li>
+        {{ trainer.name }}
+        {{ trainer.star }}
+    </li>
     {% endfor %}
 </ul>
-<img alt='duck' src={{ asset('images/duck.png') }} />
 {% endblock %}
